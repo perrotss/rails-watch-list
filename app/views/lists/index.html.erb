@@ -1,9 +1,19 @@
-<h1>Save any kind of movies</h1>
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>Save any kind of movies</h1>
+  </div>
+</div>
 
-<h2>My Lists</h2>
-<p><% @lists.each do |list| %></p>
-  <%= link_to list.name, list_path(list) %>
-  <% end %>
-<%= link_to "Create a list", new_list_path, class: 'btn btn-primary' %>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">My Lists</h2>
+    <%= link_to "Create a list", new_list_path, class: 'btn btn-success py-2' %>
+  </div>
+  <div class="row">
+    <p><% @lists.each do |list| %></p>
+      <%= link_to list.name, list_path(list) %>
+      <% end %>
+  </div>
+</div>
 
 
